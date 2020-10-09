@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="styles/desktop.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Ping coming soon page</title>
+</head>
+<body>
+  <div class="flex">
+    <section class="container">
+        <img class="logo" src="images/logo.svg" alt="Logo">
+        <h1>We are launching <span>soon!</span></h1>
+        <p class="principal">Subscribe and get notified</p>
+        <form action="#" class="form1">
+          <input type= 'text' name='text1' class="form-control" id="correo">
+            <button class="submit" type="submit" value="Submit" onclick="validarCorreo(form.correo.value)">Notify Me</button>
+            <p id="alert"></p>
+          </form>
+
+        <img class="dash" src="images/illustration-dashboard.png" alt="illustration-dashboard">
+        
+        <p class="copy">&copy; Copyright Ping. All rights reserved.</p>
+    
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a target="_blank" href="https://twitter.com/Andresfgz2">Andres Gallego</a>.
+  </section>
+  </div>
+
+  <script>
+    function validarCorreo(correo){
+      var expReg = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
+      var esValido = expReg.test(correo);
+        if (esValido == false) {
+          document.getElementById('alert').innerHTML="Please provide a valid email address";
+        } else {
+         
+        }
+    }
+  </script>
+
+</body>
+
+</html>
